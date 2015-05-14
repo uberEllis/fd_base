@@ -1,0 +1,6 @@
+// Use this file for your local mixins and variables that are not standard Foundation
+$margin-default: 22px;
+
+@mixin box-shadow-default {
+  box-shadow: 0 6px 6px -6px darken($body-bg, 60%);
+}

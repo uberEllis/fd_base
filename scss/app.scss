@@ -1,0 +1,389 @@
+@import "settings";
+@import "custom";
+@import "foundation";
+@import "drupal";
+@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(http://fonts.googleapis.com/css?family=Handlee);
+@import url(http://fonts.googleapis.com/css?family=Devonshire);
+@import url(http://fonts.googleapis.com/css?family=Handlee);
+
+// Global HTML selectors
+h1.page-title {
+  font-weight: 100;
+}
+
+
+// DASHBOARD
+#dashboard {
+  padding: 0;
+  margin: 0;
+  background: darken($body-bg, 20%);
+  // border-bottom: 1px solid lighten($primary-color, 10%);
+  box-shadow: inset 0px -2px 10px darken($secondary-color, 50%);
+  section {
+    display: inline-block;
+    float: right;
+  }
+  #block-system-user-menu {
+    ul.menu {
+      @include button-group-container($styles:true, $float:true);
+      margin-bottom: 0;
+//      float: right;
+      li {
+        a {
+          @include button($padding:$button-tny, $bg:false, $radius:$global-radius, $full-width:true, $disabled:false);
+          margin-left: $margin-default/2;
+          margin-bottom: 0;
+        }
+        margin-bottom: 0;
+      }
+      & > li {
+        @include button-group-style($radius:true, $even:false, $float:left);
+      }
+      margin-bottom: 0;
+    }
+  }
+}
+
+// HEADER (masthead)
+#header {
+  background: $primary-color;
+  @include box-shadow-default;
+}
+
+h1.site-name {
+  font-family: 'Handlee', cursive;
+//  font-family: 'Devonshire', cursive;
+}
+
+// MISSION
+#mission {
+  // background: $primary-color url("../images/hero-image.svg") no-repeat center center;
+  background: $primary-color url("../images/the_chair.jpg") no-repeat center center;
+  background-size: cover;
+  color: $white;
+  min-height: 300px;
+  padding-top: 150px;
+  margin-bottom: $margin-default;
+  @include box-shadow-default;
+  h1.page-title {
+    color: $white;
+  }
+  p {
+    @include grid-column($columns:8, $last-column:true, $center:false, $offset:0, $push:0, $pull:0, $collapse:true, $float:left);
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+  section {
+    @include grid-row($behavior:collapsed);
+  }
+  #CTA {
+    li {
+      display: inline-block;
+      margin-right: $margin-default;
+    }
+  }
+}
+
+// CTA
+#CTA {
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      a {
+      }
+    }
+  }
+  .cta {
+    @include button($padding:$button-med, $bg:adjust_hue($primary-color, -120), $radius:5px, $full-width:false, $disabled:false);
+    border: 1px solid darken(adjust_hue($primary-color, -120), 10%);
+    text-align: left;
+    font-weight: bold;
+    @include box-shadow-default;
+  }
+}
+
+
+// BREADCRUMB
+.breadcrumbs {
+  margin-top: $margin-default;
+}
+
+// CONTENT main page content.
+// This part works out the widths of your columns depending on your
+// a.  Amount of (active) sidebars
+// b.  Small/Medium/Large reactions
+#content {
+  // Define a row
+  @include grid-row();
+  background: orange;
+}
+
+
+@media #{$medium-only} {
+  // Both sidebars active
+  // class="html front logged-in two-sidebars page-node admin-menu"
+  .two-sidebars {
+    #pageContent {
+      // columns large-7 large-push-2 
+      @include grid-column($columns:8, $last-column:false, $center:false, $offset:0, $push:0, $pull:0, $collapse:false, $float:left);
+      background: yellow;
+    }
+    #sidebars {
+      @include grid-column($columns:4, $last-column:true, $center:false, $offset:0, $push:0, $pull:0, $collapse:true, $float:right);
+    }
+    #sidebar-first {
+      background: green;
+    }
+    #sidebar-second {
+      background: red;
+    }
+  }
+}
+
+// Large up
+@media #{$large-up} { 
+  // Sidebar first only
+  .sidebar-first {
+    // Define a row
+    #content {
+      @include grid-row();
+      background: orange;
+      #pageContent {
+        @include grid-column($columns:9, $last-column:false, $center:false, $offset:3, $push:0, $pull:0, $collapse:false, $float:left);
+        background: green;
+      }
+      #sidebar-first {
+        @include grid-column($columns:3, $last-column:false, $center:false, $offset:-3, $push:0, $pull:9, $collapse:false, $float:left);
+        background: red;
+      }
+    }  
+  }
+
+  // Sidebar second only
+  .sidebar-second {
+    // Define a row
+    #content {
+      @include grid-row();
+      background: orange;
+      #pageContent {
+        @include grid-column($columns:8, $last-column:false, $center:false, $offset:0, $push:0, $pull:0, $collapse:false, $float:left);
+        background: green;
+      }
+      #sidebar-second {
+        // columns large-3
+        @include grid-column($columns:4, $last-column:true, $center:false, $offset:0, $push:0, $pull:0, $collapse:false, $float:right);
+        background: yellow;
+      }
+    }  
+  }
+
+  // Both sidebars active
+  // class="html front logged-in two-sidebars page-node admin-menu"
+  .two-sidebars {
+    // Define a row
+    #content {
+      @include grid-row();
+      background: orange;
+      #pageContent {
+        // columns large-7 large-push-2 
+        @include grid-column($columns:7, $last-column:false, $center:false, $offset:2, $push:0, $pull:0, $collapse:false, $float:left);
+        background: green;
+      }
+      #sidebar-first {
+        // columns large-2 large-pull-7
+        @include grid-column($columns:2, $last-column:false, $center:false, $offset:-2, $push:0, $pull:7, $collapse:false, $float:left);
+        background: red;
+      }
+      #sidebar-second {
+        // columns large-3
+        @include grid-column($columns:3, $last-column:true, $center:false, $offset:0, $push:0, $pull:0, $collapse:false, $float:right);
+        background: yellow;
+      }
+    }
+  }
+} 
+
+// LOCAL TASKS (Tab navigation)
+#tab-navigation {
+  // border-top: 1px solid darken($body-bg, 10%);
+  border-bottom: 1px solid $primary-color;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: $margin-default;
+  background: $body-bg;
+  /* box-shadow: 0 1px 3px darken($body-bg, 30%) inset; */
+  padding: 0 0 1px 0;
+  min-height: 29px;
+  ul.primary {
+    display: block;
+    border: none;
+    line-height: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    background: none;
+    li {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      a {
+        display: block;
+        float: left;
+        height: 26px;
+        width: auto;
+        font-size: 0.7em;
+        background-color: $body-bg;
+        border: none;
+        min-height: 26px;
+        line-height: 26px;
+        margin: 1px 0 1px 1px;
+        padding: 0 $margin-default/2;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      a:hover {
+        color: $white;
+        background-color: $primary-color;
+        border: none;
+      }
+    }
+    li.active {
+      a {
+        border: none;
+        background: $primary-color;
+        color: $white;
+      }
+    }
+  }
+
+  ul.secondary {
+    border-top: 1px solid darken($body-bg, 10%);
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: $margin-default;
+    min-height: 29px;
+    display: block;
+    line-height: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    background: none;
+    li {
+      border: none;
+      display: inline;
+      padding: 0;
+      margin: 0;
+      a {
+        display: block;
+        float: left;
+        height: 26px;
+        width: auto;
+        font-size: 0.7em;
+        background-color: $body-bg;
+        border: none;
+        min-height: 26px;
+        line-height: 26px;
+        margin: 1px 0 1px 1px;
+        padding: 0 $margin-default/2;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      a:hover {
+        color: $white;
+        background-color: $primary-color;
+        border: none;
+      }
+    }
+    li.active {
+      a {
+        border: none;
+        background: $primary-color;
+        color: $white;
+      }
+    }
+  }
+}
+
+// FOOTER
+#footernav {
+  background: $primary-color;
+}
+
+
+#footermessage {
+  .region-footer-message {
+    color: #7e7e7e;
+    font-size: 0.8em;
+    padding: 12px 0;
+  }
+}
+
+// UX MENU
+#uxmenu {
+  border-bottom: 1px solid $secondary-color;
+  margin-bottom: $margin-default;
+  padding: $margin-default 0;
+  @include box-shadow-default;
+  section {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #7e7e7e;
+    h6.blocktitle {
+      font-size: 0.8rem;
+    }
+  }
+  .menu {
+    @include inline-list;
+    margin-bottom: 0;
+    li {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// COLOPHON
+#colophon {
+  text-align: right;
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    
+  }
+  li {
+    display: inline;
+    margin: 0;
+    padding: 0;
+    a {
+      display: inline-block;
+      line-height: 36px;
+      text-indent: -9999em;
+      overflow: hidden;
+      text-align: left;
+      min-height: 36px;
+    }
+    a.drupal {
+      background: transparent url("../images/colophon_logo_drupal_bw.png") no-repeat center center;
+      width: 139px;
+    }
+    a.drupal:hover {
+      background: transparent url("../images/colophon_logo_drupal.png") no-repeat center center;
+    }
+    a.uberellis {
+      width: 150px;
+      background: transparent url("../images/colophon_logo_uberellis_bw.png") no-repeat center center;
+    }
+    a.uberellis:hover {
+      background: transparent url("../images/colophon_logo_uberellis.png") no-repeat center center;
+    }
+  }
+}

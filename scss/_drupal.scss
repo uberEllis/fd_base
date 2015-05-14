@@ -1,0 +1,111 @@
+// This file is useful to override some drupal defaults that are not explicitly covered
+//  by overridden stylesheets
+// 
+// For use with variables from settings and/or foundation
+
+// Global Drupal
+#help {
+  font-size: 1.25rem;
+  color: $info-color;
+  p {
+    font-weight: 300;
+  }
+}
+
+ul.inline {
+  @include inline-list;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Using the default styles
+.form-submit { @include button(rem-calc(13), $smoke, 3px, false, false); }
+
+// PAGER
+.pager {
+  @include pagination;
+}
+
+/* This bit makes things like the admin-menu render in a normal font-size */
+#admin-menu ul,
+#admin-menu ol,
+#admin-menu dl {
+  font-size: 1em;
+}
+#admin-menu ul li ul,
+#admin-menuul li ol {
+  font-size: 1em;
+}
+
+#content table {
+  width: 100%;
+}
+
+/* Reset the width of form inputs */
+select {
+  width: auto;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"] {
+  /* width: auto; */
+  /* max-width: 250px; */
+  margin-bottom: 0;
+}
+
+select {
+  margin-bottom: 0;
+}
+
+textarea {
+  width: 100%;
+  height: auto;
+}
+
+input[type="submit"] {
+  margin-right: 0.8em;
+}
+
+.form-type-checkbox .form-required:before,
+.form-type-checkbox .form-required:after {
+  box-sizing: none;
+}
+
+/* Animated throbber */
+html.js input.form-autocomplete {
+  background-position: 98% 13px; /* LTR */ 
+  background-repeat: no-repeat;
+}
+html.js input.throbbing {
+  background-position: 98% -9px; /* LTR */
+}
+
+/* Fix the form height within admin menu */
+#admin-menu-search input {
+  height: auto;
+}
+
+/* Prevent a margin on paragraphs when using the grid-blocks on a body field wich automatically adds <p> tags everywhere */
+li a.th p {
+  margin-bottom: 0;
+}
+
+/* Prevent Secondary menu items from making the footer menus go spaz */
+#menublocks ul.menu li ul {
+  display: none;
+}
