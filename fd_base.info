@@ -12,7 +12,7 @@ screenshot = screenshot.png
 stylesheets[all][] = stylesheets/system.theme.css
 stylesheets[all][] = stylesheets/system.menus.css
 stylesheets[all][] = stylesheets/app.css
-stylesheets[all][] = stylesheets/style.css
+; stylesheets[all][] = stylesheets/style.css
 
 ; Standard Regions
 regions[dashboard] = User dashboard (menu)
