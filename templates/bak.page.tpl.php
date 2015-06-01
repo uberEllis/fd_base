@@ -102,10 +102,6 @@
 
 <?php // Main Content Area ?>
 <section id="content">
-
-  <?php if ($messages) { ?>
-  <div class="row"><div id="messages" class="small-12 columns"><?php print ($messages); ?></div></div><!-- messages -->
-  <?php } // endif; ?>
   
   <div class="row">
     <?php // Sidebar-first ?>
