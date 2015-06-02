@@ -8951,23 +8951,23 @@ ul.inline li {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  padding: 0.8125rem 1.625rem 0.875rem 1.625rem;
-  background-color: #EEEEEE;
-  border-color: #bebebe;
-  color: #333333;
-  border-radius: 3px;
+  padding: 1rem 2rem 1.0625rem 2rem;
+  font-size: 1rem;
+  background-color: #008CBA;
+  border-color: #007095;
+  color: #FFFFFF;
   transition: background-color 300ms ease-out;
 }
 /* line 158, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 .form-submit:hover, .form-submit:focus {
-  background-color: #bebebe;
+  background-color: #007095;
 }
 /* line 164, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 .form-submit:hover, .form-submit:focus {
-  color: #333333;
+  color: #FFFFFF;
 }
 
-/* line 29, ../scss/_drupal.scss */
+/* line 30, ../scss/_drupal.scss */
 .pager {
   display: block;
   margin-left: -0.3125rem;
@@ -9025,99 +9025,52 @@ ul.inline li {
 }
 
 /* This bit makes things like the admin-menu render in a normal font-size */
-/* line 34, ../scss/_drupal.scss */
+/* line 35, ../scss/_drupal.scss */
 #admin-menu ul,
 #admin-menu ol,
 #admin-menu dl {
   font-size: 1em;
 }
 
-/* line 39, ../scss/_drupal.scss */
+/* line 40, ../scss/_drupal.scss */
 #admin-menu ul li ul,
 #admin-menuul li ol {
   font-size: 1em;
 }
 
-/* line 44, ../scss/_drupal.scss */
+/* line 45, ../scss/_drupal.scss */
 #content table {
   width: 100%;
 }
 
-/* Reset the width of form inputs */
-/* line 49, ../scss/_drupal.scss */
-select {
-  width: auto;
-}
-
-/* line 53, ../scss/_drupal.scss */
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"] {
-  /* width: auto; */
-  /* max-width: 250px; */
-  margin-bottom: 0;
-}
-
-/* line 71, ../scss/_drupal.scss */
-select {
-  margin-bottom: 0;
-}
-
-/* line 75, ../scss/_drupal.scss */
-textarea {
-  width: 100%;
-  height: auto;
-}
-
-/* line 80, ../scss/_drupal.scss */
-input[type="submit"] {
-  margin-right: 0.8em;
-}
-
-/* line 84, ../scss/_drupal.scss */
-.form-type-checkbox .form-required:before,
-.form-type-checkbox .form-required:after {
-  box-sizing: none;
-}
-
 /* Animated throbber */
-/* line 90, ../scss/_drupal.scss */
+/* line 51, ../scss/_drupal.scss */
 html.js input.form-autocomplete {
   background-position: 98% 13px;
   /* LTR */
   background-repeat: no-repeat;
 }
 
-/* line 94, ../scss/_drupal.scss */
+/* line 55, ../scss/_drupal.scss */
 html.js input.throbbing {
   background-position: 98% -9px;
   /* LTR */
 }
 
 /* Fix the form height within admin menu */
-/* line 99, ../scss/_drupal.scss */
+/* line 60, ../scss/_drupal.scss */
 #admin-menu-search input {
   height: auto;
 }
 
 /* Prevent a margin on paragraphs when using the grid-blocks on a body field wich automatically adds <p> tags everywhere */
-/* line 104, ../scss/_drupal.scss */
+/* line 65, ../scss/_drupal.scss */
 li a.th p {
   margin-bottom: 0;
 }
 
 /* Prevent Secondary menu items from making the footer menus go spaz */
-/* line 109, ../scss/_drupal.scss */
+/* line 70, ../scss/_drupal.scss */
 #menublocks ul.menu li ul {
   display: none;
 }
@@ -9156,6 +9109,50 @@ li a.th p {
   }
 
   /* line 18, ../scss/_scaffold.scss */
+  .sidebar-first #pageContent {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 100%;
+    float: right;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: left;
+    margin-left: 0 !important;
+  }
+  /* line 21, ../scss/_scaffold.scss */
+  .sidebar-first #sidebar-first {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 100%;
+    float: right;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: left;
+    margin-left: 0 !important;
+  }
+
+  /* line 27, ../scss/_scaffold.scss */
+  .sidebar-second {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 100%;
+    float: right;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: left;
+    margin-left: 0 !important;
+  }
+
+  /* line 32, ../scss/_scaffold.scss */
   .two-sidebars #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9168,7 +9165,7 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 21, ../scss/_scaffold.scss */
+  /* line 35, ../scss/_scaffold.scss */
   .two-sidebars #sidebars {
     position: relative;
     padding-left: 0.46875rem;
@@ -9182,7 +9179,7 @@ li a.th p {
     float: right;
     margin-left: 0 !important;
   }
-  /* line 24, ../scss/_scaffold.scss */
+  /* line 38, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-first {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9197,7 +9194,7 @@ li a.th p {
   .two-sidebars #sidebar-first:after {
     clear: both;
   }
-  /* line 27, ../scss/_scaffold.scss */
+  /* line 41, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-second {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9214,7 +9211,7 @@ li a.th p {
   }
 }
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-  /* line 34, ../scss/_scaffold.scss */
+  /* line 48, ../scss/_scaffold.scss */
   #content {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9230,7 +9227,62 @@ li a.th p {
     clear: both;
   }
 
-  /* line 41, ../scss/_scaffold.scss */
+  /* line 56, ../scss/_scaffold.scss */
+  .sidebar-first #pageContent {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 75%;
+    float: right;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: right;
+    margin-left: 0 !important;
+  }
+  /* line 59, ../scss/_scaffold.scss */
+  .sidebar-first #sidebar-first {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 25%;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: left;
+    margin-left: 0 !important;
+  }
+
+  /* line 66, ../scss/_scaffold.scss */
+  .sidebar-second #pageContent {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 75%;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: left;
+    margin-left: 0 !important;
+  }
+  /* line 69, ../scss/_scaffold.scss */
+  .sidebar-second #sidebar-second {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 25%;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: right;
+    margin-left: 0 !important;
+  }
+
+  /* line 76, ../scss/_scaffold.scss */
   .two-sidebars #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9243,7 +9295,7 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 44, ../scss/_scaffold.scss */
+  /* line 79, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-first {
     position: relative;
     padding-left: 0.46875rem;
@@ -9256,7 +9308,7 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 48, ../scss/_scaffold.scss */
+  /* line 83, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-second {
     position: relative;
     padding-left: 0.46875rem;
@@ -9271,7 +9323,7 @@ li a.th p {
   }
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 57, ../scss/_scaffold.scss */
+  /* line 92, ../scss/_scaffold.scss */
   #content {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9287,7 +9339,7 @@ li a.th p {
     clear: both;
   }
 
-  /* line 65, ../scss/_scaffold.scss */
+  /* line 100, ../scss/_scaffold.scss */
   .sidebar-first #content {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9302,7 +9354,7 @@ li a.th p {
   .sidebar-first #content:after {
     clear: both;
   }
-  /* line 67, ../scss/_scaffold.scss */
+  /* line 102, ../scss/_scaffold.scss */
   .sidebar-first #content #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9315,7 +9367,7 @@ li a.th p {
     float: left;
     margin-left: 25% !important;
   }
-  /* line 70, ../scss/_scaffold.scss */
+  /* line 105, ../scss/_scaffold.scss */
   .sidebar-first #content #sidebar-first {
     position: relative;
     padding-left: 0.46875rem;
@@ -9329,7 +9381,7 @@ li a.th p {
     margin-left: -25% !important;
   }
 
-  /* line 79, ../scss/_scaffold.scss */
+  /* line 114, ../scss/_scaffold.scss */
   .sidebar-second #content {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9344,7 +9396,7 @@ li a.th p {
   .sidebar-second #content:after {
     clear: both;
   }
-  /* line 81, ../scss/_scaffold.scss */
+  /* line 116, ../scss/_scaffold.scss */
   .sidebar-second #content #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9357,7 +9409,7 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 84, ../scss/_scaffold.scss */
+  /* line 119, ../scss/_scaffold.scss */
   .sidebar-second #content #sidebar-second {
     position: relative;
     padding-left: 0.46875rem;
@@ -9372,7 +9424,7 @@ li a.th p {
     margin-left: 0 !important;
   }
 
-  /* line 95, ../scss/_scaffold.scss */
+  /* line 130, ../scss/_scaffold.scss */
   .two-sidebars #content {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9387,7 +9439,7 @@ li a.th p {
   .two-sidebars #content:after {
     clear: both;
   }
-  /* line 98, ../scss/_scaffold.scss */
+  /* line 133, ../scss/_scaffold.scss */
   .two-sidebars #content #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9400,7 +9452,7 @@ li a.th p {
     float: left;
     margin-left: 16.66667% !important;
   }
-  /* line 102, ../scss/_scaffold.scss */
+  /* line 137, ../scss/_scaffold.scss */
   .two-sidebars #content #sidebar-first {
     position: relative;
     padding-left: 0.46875rem;
@@ -9413,7 +9465,7 @@ li a.th p {
     float: left;
     margin-left: -16.66667% !important;
   }
-  /* line 106, ../scss/_scaffold.scss */
+  /* line 141, ../scss/_scaffold.scss */
   .two-sidebars #content #sidebar-second {
     position: relative;
     padding-left: 0.46875rem;

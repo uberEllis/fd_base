@@ -22,8 +22,6 @@ ul.inline {
   }
 }
 
-// Using the default styles
-.form-submit { @include button(rem-calc(13), $smoke, 3px, false, false); }
 
 // PAGER
 .pager {
@@ -45,46 +43,6 @@ ul.inline {
   width: 100%;
 }
 
-/* Reset the width of form inputs */
-select {
-  width: auto;
-}
-
-input[type="text"],
-input[type="password"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="month"],
-input[type="week"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="tel"],
-input[type="time"],
-input[type="url"] {
-  /* width: auto; */
-  /* max-width: 250px; */
-  margin-bottom: 0;
-}
-
-select {
-  margin-bottom: 0;
-}
-
-textarea {
-  width: 100%;
-  height: auto;
-}
-
-input[type="submit"] {
-  margin-right: 0.8em;
-}
-
-.form-type-checkbox .form-required:before,
-.form-type-checkbox .form-required:after {
-  box-sizing: none;
-}
 
 /* Animated throbber */
 html.js input.form-autocomplete {
