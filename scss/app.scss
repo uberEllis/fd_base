@@ -37,11 +37,11 @@
    "foundation/components/visibility";
 @import "drupal";
 @import "scaffold";
-@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
-@import url(http://fonts.googleapis.com/css?family=Handlee);
-@import url(http://fonts.googleapis.com/css?family=Devonshire);
-@import url(http://fonts.googleapis.com/css?family=Handlee);
+// @import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
+// @import url(http://fonts.googleapis.com/css?family=Pacifico);
+// @import url(http://fonts.googleapis.com/css?family=Handlee);
+// @import url(http://fonts.googleapis.com/css?family=Devonshire);
+// @import url(http://fonts.googleapis.com/css?family=Handlee);
 //    "foundation/components/forms",
 
 
@@ -52,7 +52,7 @@ h1.page-title {
 
 
 // DASHBOARD
-#dashboard {
+#user-dashboard {
   padding: 0;
   margin: 0;
   background: darken($body-bg, 20%);
@@ -62,7 +62,8 @@ h1.page-title {
     display: inline-block;
     float: right;
   }
-  #block-system-user-menu {
+  #block-system-user-menu,
+  #block-menu-menu-hi5-create-content {
     ul.menu {
       @include button-group-container($styles:true, $float:true);
       margin-bottom: 0;
@@ -90,7 +91,7 @@ h1.page-title {
 }
 
 h1.site-name {
-  font-family: 'Handlee', cursive;
+//  font-family: 'Handlee', cursive;
 //  font-family: 'Devonshire', cursive;
 }
 
@@ -153,106 +154,45 @@ h1.site-name {
 
 // CONTENT main page content.
 // AE: See _scaffold.scss for setting up the columns and rows for sidebars and/or other regions
+#content {
+  padding: $margin-default/2 0;
+  article {
+    margin-bottom: $margin-default;
+  }
+}
 
-// LOCAL TASKS (Tab navigation)
-#tab-navigation {
-  // border-top: 1px solid darken($body-bg, 10%);
-  border-bottom: 1px solid $primary-color;
-  letter-spacing: 1px;
-  margin: 0;
-  margin-bottom: $margin-default;
-  background: $body-bg;
-  /* box-shadow: 0 1px 3px darken($body-bg, 30%) inset; */
-  padding: 0 0 1px 0;
-  min-height: 29px;
-  ul.primary {
-    display: block;
-    border: none;
-    line-height: 26px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    background: none;
-    li {
-      display: inline;
-      margin: 0;
-      padding: 0;
-      a {
-        display: block;
-        float: left;
-        height: 26px;
-        width: auto;
-        font-size: 0.7em;
-        background-color: $body-bg;
-        border: none;
-        min-height: 26px;
-        line-height: 26px;
-        margin: 1px 0 1px 1px;
-        padding: 0 $margin-default/2;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-      a:hover {
-        color: $white;
-        background-color: $primary-color;
-        border: none;
-      }
-    }
-    li.active {
-      a {
-        border: none;
-        background: $primary-color;
-        color: $white;
-      }
+#pageContent {
+  article.some-class {
+    .ctools-collapsible-content {
+      @include panel();
     }
   }
+}
 
-  ul.secondary {
-    border-top: 1px solid darken($body-bg, 10%);
-    border-bottom: none;
-    padding: 0;
-    margin: 0;
+// POLYPTYCH
+#polyptych {
+  background: darken($primary-color, 20%);
+  padding: $margin-default/2 0;
+  margin: $margin-default 0;
+  .block {
+    color: $white;
+    font-size: 0.8rem;
     margin-bottom: $margin-default;
-    min-height: 29px;
-    display: block;
-    line-height: 26px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap;
-    background: none;
-    li {
-      border: none;
-      display: inline;
-      padding: 0;
-      margin: 0;
-      a {
-        display: block;
-        float: left;
-        height: 26px;
-        width: auto;
-        font-size: 0.7em;
-        background-color: $body-bg;
-        border: none;
-        min-height: 26px;
-        line-height: 26px;
-        margin: 1px 0 1px 1px;
-        padding: 0 $margin-default/2;
-        text-decoration: none;
-        text-transform: uppercase;
-      }
-      a:hover {
-        color: $white;
-        background-color: $primary-color;
-        border: none;
-      }
+    .block-title {
+      font-size: 1.5rem;
+      color: $white;
     }
-    li.active {
-      a {
-        border: none;
-        background: $primary-color;
+    form {
+      legend {
+        background: darken($primary-color, 20%);
+      }
+      label {
         color: $white;
+      }
+      .form-item {
+        .description {
+          color: $white;
+        }
       }
     }
   }
@@ -261,15 +201,6 @@ h1.site-name {
 // FOOTER
 #footernav {
   background: $primary-color;
-}
-
-
-#footermessage {
-  .region-footer-message {
-    color: #7e7e7e;
-    font-size: 0.8em;
-    padding: 12px 0;
-  }
 }
 
 // UX MENU
@@ -295,17 +226,47 @@ h1.site-name {
   }
 }
 
+//COPYRIGHT
+#copyright {
+}
+
+#footer-message {
+  .region-footer-message {
+    color: $smoke;
+    font-size: 0.8em;
+    padding: $margin-default/2 0;
+    @media #{$small-only} {
+      text-align: center;
+    }
+  }
+}
+
 // COLOPHON
 #colophon {
   text-align: right;
+  @media #{$small-only} {
+    text-align: center;
+  }
   ul {
     margin: 0;
     padding: 0;
     text-align: right;
-    
+    @media #{$small-only} {
+      text-align: center;
+    }
   }
   li {
-    display: inline;
+    @media #{$small-only} {
+      display: inline;
+      text-align: center;
+      list-style: none;
+    }
+    @media #{$medium-only} {
+      display: block;
+    }
+    @media #{$large-up} {
+      display: inline;
+    } 
     margin: 0;
     padding: 0;
     a {

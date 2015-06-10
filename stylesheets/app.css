@@ -1,8 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Shadows+Into+Light);
-@import url(http://fonts.googleapis.com/css?family=Pacifico);
-@import url(http://fonts.googleapis.com/css?family=Handlee);
-@import url(http://fonts.googleapis.com/css?family=Devonshire);
-@import url(http://fonts.googleapis.com/css?family=Handlee);
 /* line 364, ../bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.5.2/";
@@ -2312,7 +2307,7 @@ button::-moz-focus-inner {
 }
 /* line 215, ../bower_components/foundation/scss/foundation/components/_dropdown.scss */
 .f-dropdown li:hover, .f-dropdown li:focus {
-  background: #EEEEEE;
+  background: #7e7e7e;
 }
 /* line 218, ../bower_components/foundation/scss/foundation/components/_dropdown.scss */
 .f-dropdown li.radius {
@@ -4132,7 +4127,7 @@ button::-moz-focus-inner {
 }
 /* line 154, ../bower_components/foundation/scss/foundation/components/_joyride.scss */
 .joyride-close-tip:hover, .joyride-close-tip:focus {
-  color: #EEEEEE !important;
+  color: #7e7e7e !important;
 }
 
 /* line 158, ../bower_components/foundation/scss/foundation/components/_joyride.scss */
@@ -4783,7 +4778,7 @@ ul.pagination li {
 /* line 142, ../bower_components/foundation/scss/foundation/components/_pricing-tables.scss */
 .pricing-table .title {
   background-color: #333333;
-  color: #EEEEEE;
+  color: #7e7e7e;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-size: 1rem;
   font-weight: normal;
@@ -8897,17 +8892,45 @@ th.hide-for-touch {
     display: none !important;
   }
 }
-/* line 7, ../scss/_drupal.scss */
-#help {
+/* line 8, ../scss/_drupal.scss */
+#help .block {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d8d8d8;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #f2f2f2;
+  color: #333333;
   font-size: 1.25rem;
   color: #a0d3e8;
 }
-/* line 10, ../scss/_drupal.scss */
-#help p {
+/* line 61, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#help .block > :first-child {
+  margin-top: 0;
+}
+/* line 62, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#help .block > :last-child {
+  margin-bottom: 0;
+}
+/* line 67, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#help .block h1, #help .block h2, #help .block h3, #help .block h4, #help .block h5, #help .block h6, #help .block p, #help .block li, #help .block dl {
+  color: #333333;
+}
+/* line 74, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#help .block h1, #help .block h2, #help .block h3, #help .block h4, #help .block h5, #help .block h6 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+/* line 76, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#help .block h1.subheader, #help .block h2.subheader, #help .block h3.subheader, #help .block h4.subheader, #help .block h5.subheader, #help .block h6.subheader {
+  line-height: 1.4;
+}
+/* line 12, ../scss/_drupal.scss */
+#help .block p {
   font-weight: 300;
 }
 
-/* line 15, ../scss/_drupal.scss */
+/* line 18, ../scss/_drupal.scss */
 ul.inline {
   list-style: none;
   margin-left: -1.375rem;
@@ -8929,13 +8952,24 @@ ul.inline > li {
 ul.inline > li > * {
   display: block;
 }
-/* line 19, ../scss/_drupal.scss */
+/* line 22, ../scss/_drupal.scss */
 ul.inline li {
   margin: 0 11px 0 0;
   padding: 0;
 }
 
-/* line 26, ../scss/_drupal.scss */
+/* line 30, ../scss/_drupal.scss */
+form label {
+  font-weight: bold;
+}
+/* line 33, ../scss/_drupal.scss */
+form .description {
+  font-size: 0.8rem;
+  margin-top: -0.9rem;
+  color: #7e7e7e;
+}
+
+/* line 41, ../scss/_drupal.scss */
 .form-submit {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -8957,6 +8991,7 @@ ul.inline li {
   border-color: #007095;
   color: #FFFFFF;
   transition: background-color 300ms ease-out;
+  margin-right: 11px;
 }
 /* line 158, ../bower_components/foundation/scss/foundation/components/_buttons.scss */
 .form-submit:hover, .form-submit:focus {
@@ -8967,7 +9002,7 @@ ul.inline li {
   color: #FFFFFF;
 }
 
-/* line 30, ../scss/_drupal.scss */
+/* line 48, ../scss/_drupal.scss */
 .pager {
   display: block;
   margin-left: -0.3125rem;
@@ -9025,57 +9060,181 @@ ul.inline li {
 }
 
 /* This bit makes things like the admin-menu render in a normal font-size */
-/* line 35, ../scss/_drupal.scss */
+/* line 53, ../scss/_drupal.scss */
 #admin-menu ul,
 #admin-menu ol,
 #admin-menu dl {
   font-size: 1em;
 }
 
-/* line 40, ../scss/_drupal.scss */
+/* line 58, ../scss/_drupal.scss */
 #admin-menu ul li ul,
 #admin-menuul li ol {
   font-size: 1em;
 }
 
-/* line 45, ../scss/_drupal.scss */
+/* line 63, ../scss/_drupal.scss */
 #content table {
   width: 100%;
 }
 
 /* Animated throbber */
-/* line 51, ../scss/_drupal.scss */
+/* line 69, ../scss/_drupal.scss */
 html.js input.form-autocomplete {
   background-position: 98% 13px;
   /* LTR */
   background-repeat: no-repeat;
 }
 
-/* line 55, ../scss/_drupal.scss */
+/* line 73, ../scss/_drupal.scss */
 html.js input.throbbing {
   background-position: 98% -9px;
   /* LTR */
 }
 
 /* Fix the form height within admin menu */
-/* line 60, ../scss/_drupal.scss */
+/* line 78, ../scss/_drupal.scss */
 #admin-menu-search input {
   height: auto;
 }
 
 /* Prevent a margin on paragraphs when using the grid-blocks on a body field wich automatically adds <p> tags everywhere */
-/* line 65, ../scss/_drupal.scss */
+/* line 83, ../scss/_drupal.scss */
 li a.th p {
   margin-bottom: 0;
 }
 
 /* Prevent Secondary menu items from making the footer menus go spaz */
-/* line 70, ../scss/_drupal.scss */
+/* line 88, ../scss/_drupal.scss */
 #menublocks ul.menu li ul {
   display: none;
 }
 
-/* line 1, ../scss/_scaffold.scss */
+/* line 93, ../scss/_drupal.scss */
+#tab-navigation {
+  border-bottom: 1px solid #008CBA;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: 22px;
+  background: #FFFFFF;
+  /* box-shadow: 0 1px 3px darken($body-bg, 30%) inset; */
+  padding: 0 0 1px 0;
+  min-height: 29px;
+}
+/* line 103, ../scss/_drupal.scss */
+#tab-navigation ul.primary {
+  display: block;
+  border: none;
+  line-height: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  background: none;
+}
+/* line 112, ../scss/_drupal.scss */
+#tab-navigation ul.primary li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+/* line 116, ../scss/_drupal.scss */
+#tab-navigation ul.primary li a {
+  display: block;
+  float: left;
+  height: 26px;
+  width: auto;
+  font-size: 0.7em;
+  background-color: #FFFFFF;
+  border: none;
+  min-height: 26px;
+  line-height: 26px;
+  margin: 1px 0 1px 1px;
+  padding: 0 11px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 131, ../scss/_drupal.scss */
+#tab-navigation ul.primary li a:hover {
+  color: #FFFFFF;
+  background-color: #008CBA;
+  border: none;
+}
+/* line 138, ../scss/_drupal.scss */
+#tab-navigation ul.primary li.active a {
+  border: none;
+  background: #008CBA;
+  color: #FFFFFF;
+}
+/* line 146, ../scss/_drupal.scss */
+#tab-navigation ul.secondary {
+  border-top: 1px solid #e6e6e6;
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 22px;
+  min-height: 29px;
+  display: block;
+  line-height: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  background: none;
+}
+/* line 160, ../scss/_drupal.scss */
+#tab-navigation ul.secondary li {
+  border: none;
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+/* line 165, ../scss/_drupal.scss */
+#tab-navigation ul.secondary li a {
+  display: block;
+  float: left;
+  height: 26px;
+  width: auto;
+  font-size: 0.7em;
+  background-color: #FFFFFF;
+  border: none;
+  min-height: 26px;
+  line-height: 26px;
+  margin: 1px 0 1px 1px;
+  padding: 0 11px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* line 180, ../scss/_drupal.scss */
+#tab-navigation ul.secondary li a:hover {
+  color: #FFFFFF;
+  background-color: #008CBA;
+  border: none;
+}
+/* line 187, ../scss/_drupal.scss */
+#tab-navigation ul.secondary li.active a {
+  border: none;
+  background: #008CBA;
+  color: #FFFFFF;
+}
+
+/* line 3, ../scss/_scaffold.scss */
+#user-dashboard .region-dashboard {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%;
+}
+/* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
+#user-dashboard .region-dashboard:before, #user-dashboard .region-dashboard:after {
+  content: " ";
+  display: table;
+}
+/* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
+#user-dashboard .region-dashboard:after {
+  clear: both;
+}
+
+/* line 8, ../scss/_scaffold.scss */
 #messages {
   margin: 0 auto;
   max-width: 62.5rem;
@@ -9091,8 +9250,40 @@ li a.th p {
   clear: both;
 }
 
+/* line 12, ../scss/_scaffold.scss */
+#content {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%;
+}
+/* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
+#content:before, #content:after {
+  content: " ";
+  display: table;
+}
+/* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
+#content:after {
+  clear: both;
+}
+
+/* line 16, ../scss/_scaffold.scss */
+#copyright {
+  margin: 0 auto;
+  max-width: 62.5rem;
+  width: 100%;
+}
+/* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
+#copyright:before, #copyright:after {
+  content: " ";
+  display: table;
+}
+/* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
+#copyright:after {
+  clear: both;
+}
+
 @media only screen and (max-width: 40em) {
-  /* line 12, ../scss/_scaffold.scss */
+  /* line 25, ../scss/_scaffold.scss */
   #content {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9108,7 +9299,7 @@ li a.th p {
     clear: both;
   }
 
-  /* line 18, ../scss/_scaffold.scss */
+  /* line 30, ../scss/_scaffold.scss */
   .sidebar-first #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9122,7 +9313,7 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 21, ../scss/_scaffold.scss */
+  /* line 33, ../scss/_scaffold.scss */
   .sidebar-first #sidebar-first {
     position: relative;
     padding-left: 0.46875rem;
@@ -9137,7 +9328,7 @@ li a.th p {
     margin-left: 0 !important;
   }
 
-  /* line 27, ../scss/_scaffold.scss */
+  /* line 38, ../scss/_scaffold.scss */
   .sidebar-second {
     position: relative;
     padding-left: 0.46875rem;
@@ -9152,7 +9343,7 @@ li a.th p {
     margin-left: 0 !important;
   }
 
-  /* line 32, ../scss/_scaffold.scss */
+  /* line 42, ../scss/_scaffold.scss */
   .two-sidebars #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9165,7 +9356,7 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 35, ../scss/_scaffold.scss */
+  /* line 45, ../scss/_scaffold.scss */
   .two-sidebars #sidebars {
     position: relative;
     padding-left: 0.46875rem;
@@ -9179,7 +9370,7 @@ li a.th p {
     float: right;
     margin-left: 0 !important;
   }
-  /* line 38, ../scss/_scaffold.scss */
+  /* line 48, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-first {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9194,7 +9385,7 @@ li a.th p {
   .two-sidebars #sidebar-first:after {
     clear: both;
   }
-  /* line 41, ../scss/_scaffold.scss */
+  /* line 51, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-second {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9209,25 +9400,39 @@ li a.th p {
   .two-sidebars #sidebar-second:after {
     clear: both;
   }
-}
-@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-  /* line 48, ../scss/_scaffold.scss */
-  #content {
-    margin: 0 auto;
-    max-width: 62.5rem;
-    width: 100%;
-  }
-  /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
-  #content:before, #content:after {
-    content: " ";
-    display: table;
-  }
-  /* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
-  #content:after {
-    clear: both;
-  }
 
   /* line 56, ../scss/_scaffold.scss */
+  #footer-message {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 100%;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    margin-left: 0 !important;
+  }
+
+  /* line 59, ../scss/_scaffold.scss */
+  #colophon {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 100%;
+    float: right;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  /* line 68, ../scss/_scaffold.scss */
   .sidebar-first #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9241,7 +9446,7 @@ li a.th p {
     float: right;
     margin-left: 0 !important;
   }
-  /* line 59, ../scss/_scaffold.scss */
+  /* line 71, ../scss/_scaffold.scss */
   .sidebar-first #sidebar-first {
     position: relative;
     padding-left: 0.46875rem;
@@ -9255,7 +9460,7 @@ li a.th p {
     margin-left: 0 !important;
   }
 
-  /* line 66, ../scss/_scaffold.scss */
+  /* line 78, ../scss/_scaffold.scss */
   .sidebar-second #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9268,7 +9473,7 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 69, ../scss/_scaffold.scss */
+  /* line 81, ../scss/_scaffold.scss */
   .sidebar-second #sidebar-second {
     position: relative;
     padding-left: 0.46875rem;
@@ -9282,7 +9487,7 @@ li a.th p {
     margin-left: 0 !important;
   }
 
-  /* line 76, ../scss/_scaffold.scss */
+  /* line 88, ../scss/_scaffold.scss */
   .two-sidebars #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9295,7 +9500,7 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 79, ../scss/_scaffold.scss */
+  /* line 91, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-first {
     position: relative;
     padding-left: 0.46875rem;
@@ -9308,7 +9513,7 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 83, ../scss/_scaffold.scss */
+  /* line 95, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-second {
     position: relative;
     padding-left: 0.46875rem;
@@ -9321,25 +9526,53 @@ li a.th p {
     float: right;
     margin-left: 0 !important;
   }
-}
-@media only screen and (min-width: 64.0625em) {
-  /* line 92, ../scss/_scaffold.scss */
-  #content {
-    margin: 0 auto;
-    max-width: 62.5rem;
-    width: 100%;
-  }
-  /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
-  #content:before, #content:after {
-    content: " ";
-    display: table;
-  }
-  /* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
-  #content:after {
-    clear: both;
+
+  /* line 101, ../scss/_scaffold.scss */
+  #footer-message {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 66.66667%;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: left;
+    margin-left: 0 !important;
   }
 
-  /* line 100, ../scss/_scaffold.scss */
+  /* line 104, ../scss/_scaffold.scss */
+  #colophon {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 33.33333%;
+    float: right;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: right;
+    margin-left: 0 !important;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 114, ../scss/_scaffold.scss */
+  #user-dashboard .region-dashboard .block {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 100%;
+    float: right;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: right;
+    margin-left: 0 !important;
+  }
+
+  /* line 123, ../scss/_scaffold.scss */
   .sidebar-first #content {
     margin: 0 auto;
     max-width: 62.5rem;
@@ -9354,7 +9587,7 @@ li a.th p {
   .sidebar-first #content:after {
     clear: both;
   }
-  /* line 102, ../scss/_scaffold.scss */
+  /* line 125, ../scss/_scaffold.scss */
   .sidebar-first #content #pageContent {
     position: relative;
     padding-left: 0.46875rem;
@@ -9367,7 +9600,7 @@ li a.th p {
     float: left;
     margin-left: 25% !important;
   }
-  /* line 105, ../scss/_scaffold.scss */
+  /* line 128, ../scss/_scaffold.scss */
   .sidebar-first #content #sidebar-first {
     position: relative;
     padding-left: 0.46875rem;
@@ -9381,23 +9614,8 @@ li a.th p {
     margin-left: -25% !important;
   }
 
-  /* line 114, ../scss/_scaffold.scss */
-  .sidebar-second #content {
-    margin: 0 auto;
-    max-width: 62.5rem;
-    width: 100%;
-  }
-  /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
-  .sidebar-second #content:before, .sidebar-second #content:after {
-    content: " ";
-    display: table;
-  }
-  /* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
-  .sidebar-second #content:after {
-    clear: both;
-  }
-  /* line 116, ../scss/_scaffold.scss */
-  .sidebar-second #content #pageContent {
+  /* line 136, ../scss/_scaffold.scss */
+  .sidebar-second #pageContent {
     position: relative;
     padding-left: 0.46875rem;
     padding-right: 0.46875rem;
@@ -9409,8 +9627,8 @@ li a.th p {
     float: left;
     margin-left: 0 !important;
   }
-  /* line 119, ../scss/_scaffold.scss */
-  .sidebar-second #content #sidebar-second {
+  /* line 139, ../scss/_scaffold.scss */
+  .sidebar-second #sidebar-second {
     position: relative;
     padding-left: 0.46875rem;
     padding-right: 0.46875rem;
@@ -9424,23 +9642,8 @@ li a.th p {
     margin-left: 0 !important;
   }
 
-  /* line 130, ../scss/_scaffold.scss */
-  .two-sidebars #content {
-    margin: 0 auto;
-    max-width: 62.5rem;
-    width: 100%;
-  }
-  /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
-  .two-sidebars #content:before, .two-sidebars #content:after {
-    content: " ";
-    display: table;
-  }
-  /* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
-  .two-sidebars #content:after {
-    clear: both;
-  }
-  /* line 133, ../scss/_scaffold.scss */
-  .two-sidebars #content #pageContent {
+  /* line 148, ../scss/_scaffold.scss */
+  .two-sidebars #pageContent {
     position: relative;
     padding-left: 0.46875rem;
     padding-right: 0.46875rem;
@@ -9452,8 +9655,8 @@ li a.th p {
     float: left;
     margin-left: 16.66667% !important;
   }
-  /* line 137, ../scss/_scaffold.scss */
-  .two-sidebars #content #sidebar-first {
+  /* line 152, ../scss/_scaffold.scss */
+  .two-sidebars #sidebar-first {
     position: relative;
     padding-left: 0.46875rem;
     padding-right: 0.46875rem;
@@ -9465,12 +9668,41 @@ li a.th p {
     float: left;
     margin-left: -16.66667% !important;
   }
-  /* line 141, ../scss/_scaffold.scss */
-  .two-sidebars #content #sidebar-second {
+  /* line 156, ../scss/_scaffold.scss */
+  .two-sidebars #sidebar-second {
     position: relative;
     padding-left: 0.46875rem;
     padding-right: 0.46875rem;
     width: 25%;
+    float: right;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: right;
+    margin-left: 0 !important;
+  }
+
+  /* line 163, ../scss/_scaffold.scss */
+  #footer-message {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 66.66667%;
+    left: 0;
+    right: auto;
+    right: 0;
+    left: auto;
+    float: left;
+    margin-left: 0 !important;
+  }
+
+  /* line 166, ../scss/_scaffold.scss */
+  #colophon {
+    position: relative;
+    padding-left: 0.46875rem;
+    padding-right: 0.46875rem;
+    width: 33.33333%;
     float: right;
     left: 0;
     right: auto;
@@ -9486,19 +9718,20 @@ h1.page-title {
 }
 
 /* line 55, ../scss/app.scss */
-#dashboard {
+#user-dashboard {
   padding: 0;
   margin: 0;
   background: #cccccc;
   box-shadow: inset 0px -2px 10px #686868;
 }
 /* line 61, ../scss/app.scss */
-#dashboard section {
+#user-dashboard section {
   display: inline-block;
   float: right;
 }
-/* line 66, ../scss/app.scss */
-#dashboard #block-system-user-menu ul.menu {
+/* line 67, ../scss/app.scss */
+#user-dashboard #block-system-user-menu ul.menu,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu {
   list-style: none;
   margin: 0;
   left: 0;
@@ -9508,24 +9741,30 @@ h1.page-title {
   margin-bottom: 0;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
-#dashboard #block-system-user-menu ul.menu:before, #dashboard #block-system-user-menu ul.menu:after {
+#user-dashboard #block-system-user-menu ul.menu:before, #user-dashboard #block-system-user-menu ul.menu:after,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu:before,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu:after {
   content: " ";
   display: table;
 }
 /* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
-#dashboard #block-system-user-menu ul.menu:after {
+#user-dashboard #block-system-user-menu ul.menu:after,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu:after {
   clear: both;
 }
 /* line 32, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
-#dashboard #block-system-user-menu ul.menu div {
+#user-dashboard #block-system-user-menu ul.menu div,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu div {
   overflow: hidden;
 }
-/* line 70, ../scss/app.scss */
-#dashboard #block-system-user-menu ul.menu li {
+/* line 71, ../scss/app.scss */
+#user-dashboard #block-system-user-menu ul.menu li,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu li {
   margin-bottom: 0;
 }
-/* line 71, ../scss/app.scss */
-#dashboard #block-system-user-menu ul.menu li a {
+/* line 72, ../scss/app.scss */
+#user-dashboard #block-system-user-menu ul.menu li a,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu li a {
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 0;
@@ -9552,59 +9791,72 @@ h1.page-title {
   margin-left: 11px;
   margin-bottom: 0;
 }
-/* line 78, ../scss/app.scss */
-#dashboard #block-system-user-menu ul.menu > li {
+/* line 79, ../scss/app.scss */
+#user-dashboard #block-system-user-menu ul.menu > li,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li {
   float: left;
   display: list-item;
   margin: 0;
 }
 /* line 39, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
-#dashboard #block-system-user-menu ul.menu > li > button, #dashboard #block-system-user-menu ul.menu > li .button {
+#user-dashboard #block-system-user-menu ul.menu > li > button, #user-dashboard #block-system-user-menu ul.menu > li .button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li > button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li .button {
   border-left: 1px solid;
   border-color: rgba(255, 255, 255, 0.5);
 }
 /* line 45, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
-#dashboard #block-system-user-menu ul.menu > li:first-child button, #dashboard #block-system-user-menu ul.menu > li:first-child .button {
+#user-dashboard #block-system-user-menu ul.menu > li:first-child button, #user-dashboard #block-system-user-menu ul.menu > li:first-child .button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:first-child button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:first-child .button {
   border-left: 0;
 }
 /* line 59, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
-#dashboard #block-system-user-menu ul.menu > li:first-child {
+#user-dashboard #block-system-user-menu ul.menu > li:first-child,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:first-child {
   margin-left: 0;
 }
 /* line 93, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
-#dashboard #block-system-user-menu ul.menu > li,
-#dashboard #block-system-user-menu ul.menu > li > a,
-#dashboard #block-system-user-menu ul.menu > li > button,
-#dashboard #block-system-user-menu ul.menu > li > .button {
+#user-dashboard #block-system-user-menu ul.menu > li,
+#user-dashboard #block-system-user-menu ul.menu > li > a,
+#user-dashboard #block-system-user-menu ul.menu > li > button,
+#user-dashboard #block-system-user-menu ul.menu > li > .button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li > a,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li > button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li > .button {
   border-radius: 0;
 }
 /* line 97, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
-#dashboard #block-system-user-menu ul.menu > li:first-child, #dashboard #block-system-user-menu ul.menu > li:first-child > a, #dashboard #block-system-user-menu ul.menu > li:first-child > button, #dashboard #block-system-user-menu ul.menu > li:first-child > .button {
+#user-dashboard #block-system-user-menu ul.menu > li:first-child, #user-dashboard #block-system-user-menu ul.menu > li:first-child > a, #user-dashboard #block-system-user-menu ul.menu > li:first-child > button, #user-dashboard #block-system-user-menu ul.menu > li:first-child > .button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:first-child,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:first-child > a,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:first-child > button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:first-child > .button {
   -webkit-border-bottom-left-radius: 3px;
   -webkit-border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
 /* line 108, ../bower_components/foundation/scss/foundation/components/_button-groups.scss */
-#dashboard #block-system-user-menu ul.menu > li:last-child, #dashboard #block-system-user-menu ul.menu > li:last-child > a, #dashboard #block-system-user-menu ul.menu > li:last-child > button, #dashboard #block-system-user-menu ul.menu > li:last-child > .button {
+#user-dashboard #block-system-user-menu ul.menu > li:last-child, #user-dashboard #block-system-user-menu ul.menu > li:last-child > a, #user-dashboard #block-system-user-menu ul.menu > li:last-child > button, #user-dashboard #block-system-user-menu ul.menu > li:last-child > .button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:last-child,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:last-child > a,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:last-child > button,
+#user-dashboard #block-menu-menu-hi5-create-content ul.menu > li:last-child > .button {
   -webkit-border-bottom-right-radius: 3px;
   -webkit-border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
 }
 
-/* line 87, ../scss/app.scss */
+/* line 88, ../scss/app.scss */
 #header {
   background: #008CBA;
   box-shadow: 0 6px 6px -6px #666666;
 }
 
-/* line 92, ../scss/app.scss */
-h1.site-name {
-  font-family: 'Handlee', cursive;
-}
-
-/* line 98, ../scss/app.scss */
+/* line 99, ../scss/app.scss */
 #mission {
   background: #008CBA url("../images/hero-image.svg") no-repeat center center;
   background-size: cover;
@@ -9614,11 +9866,11 @@ h1.site-name {
   margin-bottom: 22px;
   box-shadow: 0 6px 6px -6px #666666;
 }
-/* line 107, ../scss/app.scss */
+/* line 108, ../scss/app.scss */
 #mission h1.page-title {
   color: #FFFFFF;
 }
-/* line 110, ../scss/app.scss */
+/* line 111, ../scss/app.scss */
 #mission p {
   position: relative;
   padding-left: 0;
@@ -9634,7 +9886,7 @@ h1.site-name {
   font-size: 1.2rem;
   font-weight: 200;
 }
-/* line 115, ../scss/app.scss */
+/* line 116, ../scss/app.scss */
 #mission section {
   margin: 0 auto;
   max-width: 62.5rem;
@@ -9649,24 +9901,24 @@ h1.site-name {
 #mission section:after {
   clear: both;
 }
-/* line 119, ../scss/app.scss */
+/* line 120, ../scss/app.scss */
 #mission #CTA li {
   display: inline-block;
   margin-right: 22px;
 }
 
-/* line 128, ../scss/app.scss */
+/* line 129, ../scss/app.scss */
 #CTA ul {
   margin: 0;
   padding: 0;
 }
-/* line 131, ../scss/app.scss */
+/* line 132, ../scss/app.scss */
 #CTA ul li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 139, ../scss/app.scss */
+/* line 140, ../scss/app.scss */
 #CTA .cta {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -9703,149 +9955,105 @@ h1.site-name {
   color: #FFFFFF;
 }
 
-/* line 150, ../scss/app.scss */
+/* line 151, ../scss/app.scss */
 .breadcrumbs {
   margin-top: 22px;
 }
 
-/* line 158, ../scss/app.scss */
-#tab-navigation {
-  border-bottom: 1px solid #008CBA;
-  letter-spacing: 1px;
-  margin: 0;
-  margin-bottom: 22px;
-  background: #FFFFFF;
-  /* box-shadow: 0 1px 3px darken($body-bg, 30%) inset; */
-  padding: 0 0 1px 0;
-  min-height: 29px;
+/* line 157, ../scss/app.scss */
+#content {
+  padding: 11px 0;
 }
-/* line 168, ../scss/app.scss */
-#tab-navigation ul.primary {
-  display: block;
-  border: none;
-  line-height: 26px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  background: none;
+/* line 159, ../scss/app.scss */
+#content article {
+  margin-bottom: 22px;
+}
+
+/* line 166, ../scss/app.scss */
+#pageContent article.some-class .ctools-collapsible-content {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d8d8d8;
+  margin-bottom: 1.25rem;
+  padding: 1.25rem;
+  background: #f2f2f2;
+  color: #333333;
+}
+/* line 61, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#pageContent article.some-class .ctools-collapsible-content > :first-child {
+  margin-top: 0;
+}
+/* line 62, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#pageContent article.some-class .ctools-collapsible-content > :last-child {
+  margin-bottom: 0;
+}
+/* line 67, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#pageContent article.some-class .ctools-collapsible-content h1, #pageContent article.some-class .ctools-collapsible-content h2, #pageContent article.some-class .ctools-collapsible-content h3, #pageContent article.some-class .ctools-collapsible-content h4, #pageContent article.some-class .ctools-collapsible-content h5, #pageContent article.some-class .ctools-collapsible-content h6, #pageContent article.some-class .ctools-collapsible-content p, #pageContent article.some-class .ctools-collapsible-content li, #pageContent article.some-class .ctools-collapsible-content dl {
+  color: #333333;
+}
+/* line 74, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#pageContent article.some-class .ctools-collapsible-content h1, #pageContent article.some-class .ctools-collapsible-content h2, #pageContent article.some-class .ctools-collapsible-content h3, #pageContent article.some-class .ctools-collapsible-content h4, #pageContent article.some-class .ctools-collapsible-content h5, #pageContent article.some-class .ctools-collapsible-content h6 {
+  line-height: 1;
+  margin-bottom: 0.625rem;
+}
+/* line 76, ../bower_components/foundation/scss/foundation/components/_panels.scss */
+#pageContent article.some-class .ctools-collapsible-content h1.subheader, #pageContent article.some-class .ctools-collapsible-content h2.subheader, #pageContent article.some-class .ctools-collapsible-content h3.subheader, #pageContent article.some-class .ctools-collapsible-content h4.subheader, #pageContent article.some-class .ctools-collapsible-content h5.subheader, #pageContent article.some-class .ctools-collapsible-content h6.subheader {
+  line-height: 1.4;
+}
+
+/* line 173, ../scss/app.scss */
+#polyptych {
+  background: #003f54;
+  padding: 11px 0;
+  margin: 22px 0;
 }
 /* line 177, ../scss/app.scss */
-#tab-navigation ul.primary li {
-  display: inline;
-  margin: 0;
-  padding: 0;
+#polyptych .block {
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  margin-bottom: 22px;
 }
 /* line 181, ../scss/app.scss */
-#tab-navigation ul.primary li a {
-  display: block;
-  float: left;
-  height: 26px;
-  width: auto;
-  font-size: 0.7em;
-  background-color: #FFFFFF;
-  border: none;
-  min-height: 26px;
-  line-height: 26px;
-  margin: 1px 0 1px 1px;
-  padding: 0 11px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-/* line 196, ../scss/app.scss */
-#tab-navigation ul.primary li a:hover {
-  color: #FFFFFF;
-  background-color: #008CBA;
-  border: none;
-}
-/* line 203, ../scss/app.scss */
-#tab-navigation ul.primary li.active a {
-  border: none;
-  background: #008CBA;
+#polyptych .block .block-title {
+  font-size: 1.5rem;
   color: #FFFFFF;
 }
-/* line 211, ../scss/app.scss */
-#tab-navigation ul.secondary {
-  border-top: 1px solid #e6e6e6;
-  border-bottom: none;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 22px;
-  min-height: 29px;
-  display: block;
-  line-height: 26px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-  background: none;
+/* line 186, ../scss/app.scss */
+#polyptych .block form legend {
+  background: #003f54;
 }
-/* line 225, ../scss/app.scss */
-#tab-navigation ul.secondary li {
-  border: none;
-  display: inline;
-  padding: 0;
-  margin: 0;
-}
-/* line 230, ../scss/app.scss */
-#tab-navigation ul.secondary li a {
-  display: block;
-  float: left;
-  height: 26px;
-  width: auto;
-  font-size: 0.7em;
-  background-color: #FFFFFF;
-  border: none;
-  min-height: 26px;
-  line-height: 26px;
-  margin: 1px 0 1px 1px;
-  padding: 0 11px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-/* line 245, ../scss/app.scss */
-#tab-navigation ul.secondary li a:hover {
+/* line 189, ../scss/app.scss */
+#polyptych .block form label {
   color: #FFFFFF;
-  background-color: #008CBA;
-  border: none;
 }
-/* line 252, ../scss/app.scss */
-#tab-navigation ul.secondary li.active a {
-  border: none;
-  background: #008CBA;
+/* line 193, ../scss/app.scss */
+#polyptych .block form .form-item .description {
   color: #FFFFFF;
 }
 
-/* line 262, ../scss/app.scss */
+/* line 202, ../scss/app.scss */
 #footernav {
   background: #008CBA;
 }
 
-/* line 268, ../scss/app.scss */
-#footermessage .region-footer-message {
-  color: #7e7e7e;
-  font-size: 0.8em;
-  padding: 12px 0;
-}
-
-/* line 276, ../scss/app.scss */
+/* line 207, ../scss/app.scss */
 #uxmenu {
   border-bottom: 1px solid #e7e7e7;
   margin-bottom: 22px;
   padding: 22px 0;
   box-shadow: 0 6px 6px -6px #666666;
 }
-/* line 281, ../scss/app.scss */
+/* line 212, ../scss/app.scss */
 #uxmenu section {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #7e7e7e;
 }
-/* line 285, ../scss/app.scss */
+/* line 216, ../scss/app.scss */
 #uxmenu section h6.blocktitle {
   font-size: 0.8rem;
 }
-/* line 289, ../scss/app.scss */
+/* line 220, ../scss/app.scss */
 #uxmenu .menu {
   list-style: none;
   margin-left: -1.375rem;
@@ -9866,28 +10074,72 @@ h1.site-name {
 #uxmenu .menu > li > * {
   display: block;
 }
-/* line 292, ../scss/app.scss */
+/* line 223, ../scss/app.scss */
 #uxmenu .menu li {
   font-size: 0.8rem;
 }
 
-/* line 299, ../scss/app.scss */
+/* line 234, ../scss/app.scss */
+#footer-message .region-footer-message {
+  color: #7e7e7e;
+  font-size: 0.8em;
+  padding: 11px 0;
+}
+@media only screen and (max-width: 40em) {
+  /* line 234, ../scss/app.scss */
+  #footer-message .region-footer-message {
+    text-align: center;
+  }
+}
+
+/* line 245, ../scss/app.scss */
 #colophon {
   text-align: right;
 }
-/* line 301, ../scss/app.scss */
+@media only screen and (max-width: 40em) {
+  /* line 245, ../scss/app.scss */
+  #colophon {
+    text-align: center;
+  }
+}
+/* line 250, ../scss/app.scss */
 #colophon ul {
   margin: 0;
   padding: 0;
   text-align: right;
 }
-/* line 307, ../scss/app.scss */
+@media only screen and (max-width: 40em) {
+  /* line 250, ../scss/app.scss */
+  #colophon ul {
+    text-align: center;
+  }
+}
+/* line 258, ../scss/app.scss */
 #colophon li {
-  display: inline;
   margin: 0;
   padding: 0;
 }
-/* line 311, ../scss/app.scss */
+@media only screen and (max-width: 40em) {
+  /* line 258, ../scss/app.scss */
+  #colophon li {
+    display: inline;
+    text-align: center;
+    list-style: none;
+  }
+}
+@media only screen and (min-width: 40.0625em) and (max-width: 64em) {
+  /* line 258, ../scss/app.scss */
+  #colophon li {
+    display: block;
+  }
+}
+@media only screen and (min-width: 64.0625em) {
+  /* line 258, ../scss/app.scss */
+  #colophon li {
+    display: inline;
+  }
+}
+/* line 272, ../scss/app.scss */
 #colophon li a {
   display: inline-block;
   line-height: 36px;
@@ -9896,21 +10148,21 @@ h1.site-name {
   text-align: left;
   min-height: 36px;
 }
-/* line 319, ../scss/app.scss */
+/* line 280, ../scss/app.scss */
 #colophon li a.drupal {
   background: transparent url("../images/colophon_logo_drupal_bw.png") no-repeat center center;
   width: 139px;
 }
-/* line 323, ../scss/app.scss */
+/* line 284, ../scss/app.scss */
 #colophon li a.drupal:hover {
   background: transparent url("../images/colophon_logo_drupal.png") no-repeat center center;
 }
-/* line 326, ../scss/app.scss */
+/* line 287, ../scss/app.scss */
 #colophon li a.uberellis {
   width: 150px;
   background: transparent url("../images/colophon_logo_uberellis_bw.png") no-repeat center center;
 }
-/* line 330, ../scss/app.scss */
+/* line 291, ../scss/app.scss */
 #colophon li a.uberellis:hover {
   background: transparent url("../images/colophon_logo_uberellis.png") no-repeat center center;
 }

@@ -5,10 +5,13 @@
 
 // Global Drupal
 #help {
-  font-size: 1.25rem;
-  color: $info-color;
-  p {
-    font-weight: 300;
+  .block {
+    @include panel;
+    font-size: 1.25rem;
+    color: $info-color;
+    p {
+      font-weight: 300;
+    }
   }
 }
 
@@ -20,6 +23,24 @@ ul.inline {
     margin: 0 $margin-default/2 0 0;
     padding: 0;
   }
+}
+
+// FORMS
+form {
+  label {
+    font-weight: bold;
+  }
+  .description {
+    font-size: 0.8rem;
+    margin-top: -0.9rem;
+    color: $smoke;
+  }
+}
+
+// Using the default styles
+.form-submit {
+  @include button;
+  margin-right: $margin-default/2;
 }
 
 
@@ -68,4 +89,106 @@ li a.th p {
   display: none;
 }
 
+// LOCAL TASKS (Tab navigation)
+#tab-navigation {
+  // border-top: 1px solid darken($body-bg, 10%);
+  border-bottom: 1px solid $primary-color;
+  letter-spacing: 1px;
+  margin: 0;
+  margin-bottom: $margin-default;
+  background: $body-bg;
+  /* box-shadow: 0 1px 3px darken($body-bg, 30%) inset; */
+  padding: 0 0 1px 0;
+  min-height: 29px;
+  ul.primary {
+    display: block;
+    border: none;
+    line-height: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    background: none;
+    li {
+      display: inline;
+      margin: 0;
+      padding: 0;
+      a {
+        display: block;
+        float: left;
+        height: 26px;
+        width: auto;
+        font-size: 0.7em;
+        background-color: $body-bg;
+        border: none;
+        min-height: 26px;
+        line-height: 26px;
+        margin: 1px 0 1px 1px;
+        padding: 0 $margin-default/2;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      a:hover {
+        color: $white;
+        background-color: $primary-color;
+        border: none;
+      }
+    }
+    li.active {
+      a {
+        border: none;
+        background: $primary-color;
+        color: $white;
+      }
+    }
+  }
 
+  ul.secondary {
+    border-top: 1px solid darken($body-bg, 10%);
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: $margin-default;
+    min-height: 29px;
+    display: block;
+    line-height: 26px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    background: none;
+    li {
+      border: none;
+      display: inline;
+      padding: 0;
+      margin: 0;
+      a {
+        display: block;
+        float: left;
+        height: 26px;
+        width: auto;
+        font-size: 0.7em;
+        background-color: $body-bg;
+        border: none;
+        min-height: 26px;
+        line-height: 26px;
+        margin: 1px 0 1px 1px;
+        padding: 0 $margin-default/2;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      a:hover {
+        color: $white;
+        background-color: $primary-color;
+        border: none;
+      }
+    }
+    li.active {
+      a {
+        border: none;
+        background: $primary-color;
+        color: $white;
+      }
+    }
+  }
+}
