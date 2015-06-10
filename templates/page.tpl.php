@@ -54,6 +54,16 @@
 <section id="content" data-equalizer data-equalizer-mq="medium-only">
   
   <section role="main" id="pageContent" class="pageContent" data-equalizer-watch><?php // columns large-7 large-push-2 ?>
+    <?php if ($page['highlighted']) { ?>
+    <section id="highlighted">
+      <div class="row collapsed">
+        <div class="columns small-12">
+          <?php print render($page['highlighted']); ?>
+        </div><!-- .columns -->
+      </div><!-- .row -->
+    </section><!-- #highlighted -->
+    <?php } ?>
+    
     <?php if (($title) && (!$is_front)) { ?>
     <?php print render($title_prefix); ?>
     <h1 class="page-title"><?php print $title ?></h1>

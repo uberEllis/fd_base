@@ -169,6 +169,22 @@ h1.site-name {
   }
 }
 
+// SIDEBAR FIRST
+#sidebar-first {
+  .block-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .menu {
+    @include side-nav();
+    li {
+      border-bottom: 1px solid darken($body-bg, 20%);
+    }
+  }
+}
+
 // POLYPTYCH
 #polyptych {
   background: darken($primary-color, 20%);
