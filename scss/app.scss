@@ -189,7 +189,7 @@ h1.site-name {
 #polyptych {
   background: darken($primary-color, 20%);
   padding: $margin-default/2 0;
-  margin: $margin-default 0;
+  margin: $margin-default 0 0 0;
   .block {
     color: $white;
     font-size: 0.8rem;
@@ -215,8 +215,32 @@ h1.site-name {
 }
 
 // FOOTER
-#footernav {
-  background: $primary-color;
+#footer-menu {
+  background: $secondary-color;
+  height: $topbar-height;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0;
+      padding: 0;
+      a {
+        line-height: $topbar-height;
+        margin: 0 0 0 0;
+        font-size: $topbar-link-font-size;
+      }
+      a::after {
+        content: '|';
+        margin: 0 $margin-default/2;
+      }
+    }
+    li.last {
+      a::after {
+        content: '';
+        margin: 0;
+      }
+    }
+  }
 }
 
 // UX MENU
@@ -306,6 +330,9 @@ h1.site-name {
     }
     a.uberellis:hover {
       background: transparent url("../images/colophon_logo_uberellis.png") no-repeat center center;
+    }
+    a.black-lion-group {
+      text-indent: 0;
     }
   }
 }

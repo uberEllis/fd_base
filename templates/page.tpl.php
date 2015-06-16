@@ -130,6 +130,16 @@
 <?php // Footer ?>
 <section id="footer" role="pagefooter">
 
+  <?php if (isset($footer_menu)) { ?>
+  <div id="footer-menu">
+    <div class="row">
+      <div class="columns small-12 end">
+        <?php print $footer_menu; ?>
+      </div><!-- .columns -->
+    </div><!-- .row -->
+  </div><!-- #footer-menu -->
+  <?php } ?>
+
   <?php if ($page['footer_message'] || $page['colophon']) { ?>
   <div id="copyright">
     <footer id="footer-message">

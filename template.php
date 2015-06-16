@@ -16,7 +16,16 @@ function fd_base_preprocess_page(&$variables) {
   // Add the rendered output to the $main_menu_expanded variable
   $variables['main_menu_expanded'] = menu_tree_output($main_menu_tree);
   // dpm($vars['main_menu_expanded']);
-  
+
+  // Check if there's a menu created called "Footer menu" and add rendered links into $variables
+  if (module_exists('menu')) {
+    $menu_exists = menu_load('menu-footer-menu');
+    if ($menu_exists) {
+      $footer_menu = menu_navigation_links('menu-footer-menu');
+      $variables['footer_menu'] = theme('links__menu_footer_menu', array('links' => $footer_menu, 'attributes' => array('class' => array('inline'))));
+    }
+  }
+
   $options = array(
     'scope' => 'footer',
   );

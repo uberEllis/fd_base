@@ -10147,7 +10147,7 @@ h1.page-title {
 #polyptych {
   background: #003f54;
   padding: 11px 0;
-  margin: 22px 0;
+  margin: 22px 0 0 0;
 }
 /* line 193, ../scss/app.scss */
 #polyptych .block {
@@ -10174,28 +10174,55 @@ h1.page-title {
 }
 
 /* line 218, ../scss/app.scss */
-#footernav {
-  background: #008CBA;
+#footer-menu {
+  background: #e7e7e7;
+  height: 2.8125rem;
+}
+/* line 221, ../scss/app.scss */
+#footer-menu ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 224, ../scss/app.scss */
+#footer-menu ul li {
+  margin: 0;
+  padding: 0;
+}
+/* line 227, ../scss/app.scss */
+#footer-menu ul li a {
+  line-height: 2.8125rem;
+  margin: 0 0 0 0;
+  font-size: 0.8125rem;
+}
+/* line 232, ../scss/app.scss */
+#footer-menu ul li a::after {
+  content: '|';
+  margin: 0 11px;
+}
+/* line 238, ../scss/app.scss */
+#footer-menu ul li.last a::after {
+  content: '';
+  margin: 0;
 }
 
-/* line 223, ../scss/app.scss */
+/* line 247, ../scss/app.scss */
 #uxmenu {
   border-bottom: 1px solid #e7e7e7;
   margin-bottom: 22px;
   padding: 22px 0;
   box-shadow: 0 6px 6px -6px #666666;
 }
-/* line 228, ../scss/app.scss */
+/* line 252, ../scss/app.scss */
 #uxmenu section {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #7e7e7e;
 }
-/* line 232, ../scss/app.scss */
+/* line 256, ../scss/app.scss */
 #uxmenu section h6.blocktitle {
   font-size: 0.8rem;
 }
-/* line 236, ../scss/app.scss */
+/* line 260, ../scss/app.scss */
 #uxmenu .menu {
   list-style: none;
   margin-left: -1.375rem;
@@ -10216,53 +10243,53 @@ h1.page-title {
 #uxmenu .menu > li > * {
   display: block;
 }
-/* line 239, ../scss/app.scss */
+/* line 263, ../scss/app.scss */
 #uxmenu .menu li {
   font-size: 0.8rem;
 }
 
-/* line 250, ../scss/app.scss */
+/* line 274, ../scss/app.scss */
 #footer-message .region-footer-message {
   color: #7e7e7e;
   font-size: 0.8em;
   padding: 11px 0;
 }
 @media only screen and (max-width: 40em) {
-  /* line 250, ../scss/app.scss */
+  /* line 274, ../scss/app.scss */
   #footer-message .region-footer-message {
     text-align: center;
   }
 }
 
-/* line 261, ../scss/app.scss */
+/* line 285, ../scss/app.scss */
 #colophon {
   text-align: right;
 }
 @media only screen and (max-width: 40em) {
-  /* line 261, ../scss/app.scss */
+  /* line 285, ../scss/app.scss */
   #colophon {
     text-align: center;
   }
 }
-/* line 266, ../scss/app.scss */
+/* line 290, ../scss/app.scss */
 #colophon ul {
   margin: 0;
   padding: 0;
   text-align: right;
 }
 @media only screen and (max-width: 40em) {
-  /* line 266, ../scss/app.scss */
+  /* line 290, ../scss/app.scss */
   #colophon ul {
     text-align: center;
   }
 }
-/* line 274, ../scss/app.scss */
+/* line 298, ../scss/app.scss */
 #colophon li {
   margin: 0;
   padding: 0;
 }
 @media only screen and (max-width: 40em) {
-  /* line 274, ../scss/app.scss */
+  /* line 298, ../scss/app.scss */
   #colophon li {
     display: inline;
     text-align: center;
@@ -10270,18 +10297,18 @@ h1.page-title {
   }
 }
 @media only screen and (min-width: 40.0625em) and (max-width: 64em) {
-  /* line 274, ../scss/app.scss */
+  /* line 298, ../scss/app.scss */
   #colophon li {
     display: block;
   }
 }
 @media only screen and (min-width: 64.0625em) {
-  /* line 274, ../scss/app.scss */
+  /* line 298, ../scss/app.scss */
   #colophon li {
     display: inline;
   }
 }
-/* line 288, ../scss/app.scss */
+/* line 312, ../scss/app.scss */
 #colophon li a {
   display: inline-block;
   line-height: 36px;
@@ -10290,21 +10317,25 @@ h1.page-title {
   text-align: left;
   min-height: 36px;
 }
-/* line 296, ../scss/app.scss */
+/* line 320, ../scss/app.scss */
 #colophon li a.drupal {
   background: transparent url("../images/colophon_logo_drupal_bw.png") no-repeat center center;
   width: 139px;
 }
-/* line 300, ../scss/app.scss */
+/* line 324, ../scss/app.scss */
 #colophon li a.drupal:hover {
   background: transparent url("../images/colophon_logo_drupal.png") no-repeat center center;
 }
-/* line 303, ../scss/app.scss */
+/* line 327, ../scss/app.scss */
 #colophon li a.uberellis {
   width: 150px;
   background: transparent url("../images/colophon_logo_uberellis_bw.png") no-repeat center center;
 }
-/* line 307, ../scss/app.scss */
+/* line 331, ../scss/app.scss */
 #colophon li a.uberellis:hover {
   background: transparent url("../images/colophon_logo_uberellis.png") no-repeat center center;
+}
+/* line 334, ../scss/app.scss */
+#colophon li a.black-lion-group {
+  text-indent: 0;
 }
