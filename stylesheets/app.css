@@ -9670,26 +9670,26 @@ li a.th p {
     position: relative;
     padding-left: 0.46875rem;
     padding-right: 0.46875rem;
-    width: 75%;
+    width: 83.33333%;
     left: 0;
     right: auto;
     right: 0;
     left: auto;
     float: left;
-    margin-left: 25% !important;
+    margin-left: 16.66667% !important;
   }
   /* line 152, ../scss/_scaffold.scss */
   .sidebar-first #content #sidebar-first {
     position: relative;
     padding-left: 0.46875rem;
     padding-right: 0.46875rem;
-    width: 25%;
+    width: 16.66667%;
     left: 0;
     right: auto;
-    right: 75%;
+    right: 83.33333%;
     left: auto;
     float: left;
-    margin-left: -25% !important;
+    margin-left: -16.66667% !important;
   }
 
   /* line 160, ../scss/_scaffold.scss */
