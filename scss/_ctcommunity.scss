@@ -1,0 +1,26 @@
+.node-teaser {
+  .field-name-field-group-media,
+  .field-name-field-image-cover {
+    display: block;
+    margin: 0 0 $margin-default $margin-default;
+    float: right;
+    width: auto;
+  }
+}
+
+// On a group detail page there's a block
+// This bit is about that
+.side-nav.group-stats-cta-list {
+  .primary {
+    a:link, a:visited, a:active {
+      background: $primary-color;
+      color: $white;
+      font-weight: bold;
+    }
+    a:hover {
+      background: lighten($primary-color, 20%);
+      color: $white;
+      
+    }
+  }
+}
