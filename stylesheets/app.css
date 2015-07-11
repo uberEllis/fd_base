@@ -2479,7 +2479,7 @@ button::-moz-focus-inner {
 /* line 228, ../bower_components/foundation/scss/foundation/components/_grid.scss */
 .row {
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: 68.75rem;
   width: 100%;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -5645,7 +5645,7 @@ ul.pagination li {
   .reveal-modal {
     left: 0;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     right: 0;
     width: 80%;
   }
@@ -5673,7 +5673,7 @@ ul.pagination li {
   .reveal-modal.tiny {
     left: 0;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     right: 0;
     width: 30%;
   }
@@ -5683,7 +5683,7 @@ ul.pagination li {
   .reveal-modal.small {
     left: 0;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     right: 0;
     width: 40%;
   }
@@ -5693,7 +5693,7 @@ ul.pagination li {
   .reveal-modal.medium {
     left: 0;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     right: 0;
     width: 60%;
   }
@@ -5703,7 +5703,7 @@ ul.pagination li {
   .reveal-modal.large {
     left: 0;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     right: 0;
     width: 70%;
   }
@@ -5713,7 +5713,7 @@ ul.pagination li {
   .reveal-modal.xlarge {
     left: 0;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     right: 0;
     width: 95%;
   }
@@ -5733,7 +5733,7 @@ ul.pagination li {
   .reveal-modal.full {
     left: 0;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     right: 0;
     width: 100%;
   }
@@ -7565,7 +7565,7 @@ meta.foundation-mq-topbar {
   .contain-to-grid .top-bar {
     margin-bottom: 0;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
   }
 
   /* line 528, ../bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -9945,7 +9945,7 @@ li a.th p {
 /* line 3, ../scss/_scaffold.scss */
 #user-dashboard .region-dashboard {
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: 68.75rem;
   width: 100%;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -9961,7 +9961,7 @@ li a.th p {
 /* line 8, ../scss/_scaffold.scss */
 #messages {
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: 68.75rem;
   width: 100%;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -9977,7 +9977,7 @@ li a.th p {
 /* line 12, ../scss/_scaffold.scss */
 #content {
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: 68.75rem;
   width: 100%;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -9993,7 +9993,7 @@ li a.th p {
 /* line 16, ../scss/_scaffold.scss */
 #copyright {
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: 68.75rem;
   width: 100%;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -10010,7 +10010,7 @@ li a.th p {
   /* line 26, ../scss/_scaffold.scss */
   .no-sidebars #content {
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     width: 100%;
   }
   /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -10111,7 +10111,7 @@ li a.th p {
   /* line 52, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-first {
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     width: 100%;
   }
   /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -10126,7 +10126,7 @@ li a.th p {
   /* line 55, ../scss/_scaffold.scss */
   .two-sidebars #sidebar-second {
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     width: 100%;
   }
   /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -10173,7 +10173,7 @@ li a.th p {
   /* line 71, ../scss/_scaffold.scss */
   .no-sidebars #content {
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     width: 100%;
   }
   /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -10343,7 +10343,7 @@ li a.th p {
   /* line 135, ../scss/_scaffold.scss */
   .no-sidebars #content {
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     width: 100%;
   }
   /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -10373,7 +10373,7 @@ li a.th p {
   /* line 147, ../scss/_scaffold.scss */
   .sidebar-first #content {
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 68.75rem;
     width: 100%;
   }
   /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
@@ -10708,7 +10708,7 @@ h1.page-title {
 /* line 117, ../scss/app.scss */
 #mission section {
   margin: 0 auto;
-  max-width: 80rem;
+  max-width: 68.75rem;
   width: 100%;
 }
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
