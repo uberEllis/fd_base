@@ -195,3 +195,21 @@ li a.th p {
     }
   }
 }
+
+// User pictures in nodes and comments
+#pageContent {
+  article.node {
+    .user-picture {
+    //  display: block;
+    //  float: left;
+    //  margin: 0 $margin-default/2 $margin-default/2 0;
+    }
+  }
+  article.comment {
+    .user-picture {
+    //  display: block;
+    //  float: left;
+    //  margin: 0 $margin-default/2 $margin-default/2 0;
+    }
+  }
+}
