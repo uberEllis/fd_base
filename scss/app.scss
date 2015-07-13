@@ -63,27 +63,25 @@ h1.page-title {
     display: inline-block;
     float: right;
   }
-  #block-system-user-menu,
-  #block-menu-menu-hi5-create-content {
-    ul.menu {
-      @include button-group-container($styles:true, $float:true);
-      margin-bottom: 0;
+  ul.menu {
+    @include button-group-container($styles:true, $float:true);
+    margin-bottom: 0;
 //      float: right;
-      li {
-        a {
-          @include button($padding:$button-tny, $bg:false, $radius:$global-radius, $full-width:true, $disabled:false);
-          margin-left: $margin-default/2;
-          margin-bottom: 0;
-        }
+    li {
+      a {
+        @include button($padding:$button-tny, $bg:false, $radius:$global-radius, $full-width:true, $disabled:false);
+        margin-left: $margin-default/2;
         margin-bottom: 0;
-      }
-      & > li {
-        @include button-group-style($radius:true, $even:false, $float:left);
       }
       margin-bottom: 0;
     }
+    & > li {
+      @include button-group-style($radius:true, $even:false, $float:left);
+    }
+    margin-bottom: 0;
   }
 }
+
 
 // HEADER (masthead)
 #header {
