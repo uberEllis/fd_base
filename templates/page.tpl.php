@@ -63,7 +63,8 @@
       </div><!-- .row -->
     </section><!-- #highlighted -->
     <?php } ?>
-    
+
+    <a id="top" name="top"></a>
     <?php if (($title) && (!$is_front)) { ?>
     <?php print render($title_prefix); ?>
     <h1 class="page-title"><?php print $title ?></h1>
