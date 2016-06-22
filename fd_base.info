@@ -28,6 +28,7 @@ regions[triptych_last]   = Triptych last
 
 ; Main content area
 regions[cover]          = Full width cover
+regions[banner]         = Banner
 regions[help]           = Help
 regions[highlighted]    = Highlighted
 regions[content]        = Content

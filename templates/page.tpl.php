@@ -22,6 +22,8 @@
 
       <section class="top-bar-section">
         <!-- Right Nav Section -->
+        <?php print $social_links; ?>
+        
         <ul class="right">
 
         </ul>
@@ -50,6 +52,16 @@
   </div>
 </section><!-- #messages -->
 <?php } // endif; ?>
+
+<?php if ($page['banner']) {  ?>
+<section id="banner">
+  <div class="row">
+    <div class="columns small-12">
+      <?php print render($page['banner']); ?>
+    </div>
+  </div>
+</section>
+<?php } // endif banner ?>
 
 <section id="content" data-equalizer data-equalizer-mq="medium-only">
   

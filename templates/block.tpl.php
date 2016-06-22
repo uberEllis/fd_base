@@ -1,4 +1,4 @@
-<section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
+<div id="<?php print $block_html_id; ?>" class="<?php print $classes; ?>"<?php print $attributes; ?>>
   <?php print render($title_prefix); ?>
   <?php if ($block->subject): ?>
   <h2<?php print $title_attributes; ?> class="block-title"><?php print $block->subject ?></h2>
@@ -10,4 +10,4 @@
   </div>
   <?php // AE: This is ridiculous, but can be added back if designers or something, insist ?>
   <?php // <p class="block-shadow">&nbsp;</p> ?>
-</section> <!-- /.block -->
+</div> <!-- /.block -->

@@ -25,6 +25,16 @@ ul.inline {
   }
 }
 
+ul.social-list {
+  @include inline-list;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 0 $margin-default/2 0 0;
+    padding: 0;
+  }
+}
+
 // FORMS
 form {
   label {
