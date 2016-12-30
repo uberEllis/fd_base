@@ -38,6 +38,12 @@
 </header><!-- #pageHeader -->
 <?php // end Header ?>
 
+<?php if ($page['banner']) {  ?>
+<section id="banner">
+  <?php print render($page['banner']); ?>
+</section>
+<?php } // endif banner ?>
+
 <?php // Breadcrumb ?>
 <?php if (!$is_front) { ?>
 <div class="row">
@@ -52,16 +58,6 @@
   </div>
 </section><!-- #messages -->
 <?php } // endif; ?>
-
-<?php if ($page['banner']) {  ?>
-<section id="banner">
-  <div class="row">
-    <div class="columns small-12">
-      <?php print render($page['banner']); ?>
-    </div>
-  </div>
-</section>
-<?php } // endif banner ?>
 
 <section id="content" data-equalizer data-equalizer-mq="medium-only">
   
